@@ -94,9 +94,9 @@ We're gonna release the source code of Needle Mirror soon (after some cleanup, r
 
 #### Who did this?!
 
+<b>[needle — tools for unity](https://needle.tools)</b>
 [@marcel_wiessler](https://twitter.com/marcel_wiessler)
 [@hybridherbst](https://twitter.com/hybdridherbst)
-[needle — tools for unity](https://needle.tools)
 
 #### Addendum
 
