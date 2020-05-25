@@ -1,8 +1,8 @@
-## Unity Package Mirror
+## <span class="logo"><a href="https://needle.tools">!=</a></span>unity package mirror
 
-##### [All Unity Packages on GitHub](https://github.com/needle-mirror/)
+#### [All Unity Packages on GitHub](https://github.com/needle-mirror/)
 
-<b>This project mirrors all packages available in the Unity Package Manager, across all versions. This allows for easier comparison of versions, checking actual changelogs, and forking to do customisations while keeping a relatively safe upgrade path.</b>
+This project mirrors all packages available in the Unity Package Manager, across all versions. This allows for easier comparison of versions, checking actual changelogs, and forking to do customisations while keeping a relatively safe upgrade path.
 
 #### Why though?!
 
@@ -96,8 +96,7 @@ We're gonna release the source code of Needle Mirror soon (after some cleanup, r
 
 [@marcel_wiessler](https://twitter.com/marcel_wiessler)
 [@hybridherbst](https://twitter.com/hybdridherbst)
-[Needle](https://needle.tools)
-[prefrontal cortex](https://prefrontalcortex.de)
+[needle — tools for unity](https://needle.tools)
 
 #### Addendum
 
