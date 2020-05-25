@@ -1,8 +1,8 @@
-Unity Package Mirror
-==
+## Unity Package Mirror
 
-Why though?!
--
+<b>This project mirrors all packages available in the Unity Package Manager across all versions. This allows for easier comparison of versions, checking actual changelogs, and forking to do customisations while keeping a relatively safe upgrade path.</b>
+
+#### Why though?!
 
 UPM (Unity Package Manager) is great. It solves a lot of painpoints of working with Unity - and, while at it, introduces some new ones!
 Namely, since it's introduction, a common response to bugs and issues in Unity packages is "well, the source code is in your hands, go fix it yourself".
@@ -23,15 +23,25 @@ This seems to be the easiest and most comfortable way with the least headache to
 
 (Note that this is easier for some packages where Unity freely provides the source, such as Graphics, Input System and some others - and some of them even accept PRs!)
 
-Pain Points with Unity's approach to packages
--
-No proper changelogs. While all project changelogs say they "follow semantic versioning" the reality is that QA is not checking this and many, many changelogs don't make sense at all.
+#### Pain Points with Unity's approach to packages
 
-There's some notable exceptions:
+No proper changelogs. While all project changelogs say they "follow semantic versioning" the reality is that QA does not seem to be checking this and some changelogs don't make sense at all.
+- ❌❌❌
+- ❌❌
+- [XR Interaction Toolkit](https://github.com/needle-mirror/com.unity.xr.interaction.toolkit/blob/master/CHANGELOG.md) ❌
 
+Formats between changelogs vary a lot; there doesn't seem to be common guidelines for this at Unity Technologies unfortunately.
 
-Our solution
--
+Here are some notable exceptions:
+- [Input System](https://github.com/needle-mirror/com.unity.inputsystem/blob/master/CHANGELOG.md) ⭐⭐⭐ (this changelog is a work of art)
+- [Universal Rendering Pipeline](https://github.com/needle-mirror/com.unity.render-pipelines.universal/blob/master/CHANGELOG.md) ⭐⭐
+- [Cinemachine](https://github.com/needle-mirror/com.unity.cinemachine/blob/master/CHANGELOG.md) ⭐
+
+Note that the first two are public repos - turns out having your Changelog user-facing and accessible with one click improves internal quality a lot! Who'd have thought!
+
+No way to compare code between versions. While the Unity Engine C# code is fully available on GitHub the same is not true for most packages.
+
+#### Our solution
 
 Turns out we did the above process a couple of times too often over the last months.  
 So, we decided to automate it; and make it available on GitHub for everyone.
@@ -44,21 +54,17 @@ This allows for a couple of very nice things:
 
 1. Browse actual changelogs written by the devs and not the stuff the technical writers make out of it (sometimes it's better, sometimes it's worse, but the dev changelog is definitely more helpful to us).
 
-Caveats
--
+#### Caveats
 
 Currently, it's not easy to see:
 - tags of packages
 - which Unity version is supported by a specific package
 - which package versions have been unpublished again
 
-Prior approaches
--
+#### Prior approaches
 
-Contact
--
+#### Contact
 
-Addendum
--
+#### Addendum
 
 Oh, and @UnityTechnologies, if you feel this is wrong, please tell us and we'll figure something out. We'd love to take this down if you provide the same access to data that is already publicly available.
