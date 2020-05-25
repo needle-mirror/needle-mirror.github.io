@@ -1,15 +1,17 @@
 ## Unity Package Mirror
 
+##### [All Unity Packages on GitHub](https://github.com/needle-mirror/)
+
 <b>This project mirrors all packages available in the Unity Package Manager, across all versions. This allows for easier comparison of versions, checking actual changelogs, and forking to do customisations while keeping a relatively safe upgrade path.</b>
 
 #### Why though?!
 
-UPM (Unity Package Manager) is great. It solves a lot of painpoints of working with Unity - and, while at it, introduces some new ones!
+UPM ([Unity Package Manager](https://docs.unity3d.com/Manual/Packages.html))</b> is great. It solves a lot of pain points of working with Unity — and, while at it, introduces some new ones!
 Namely, since it's introduction, a common response to bugs and issues in Unity packages is "well, the source code is in your hands, go fix it yourself".
 
 "Helpfully", package manager allows to embed a package for development, essentially cluttering your entire project / repository with all the files that were so tidily packaged away before.
 
-Also, once you start going that "customization" route, you lose exactly what UPM is great for - updating packages to newer versions with fixed bugs.
+Also, once you start going that "customization" route, you lose exactly what UPM is great for — updating packages to newer versions with fixed bugs.
 
 For our own projects, we tried to minimize the impact of that in the following way:
 1. whenever changes to a package become necessary, create a new submodule
@@ -23,7 +25,7 @@ This seems to be the easiest and most comfortable way with the least headache to
 
 (Note that this is easier for some packages where Unity freely provides the source, such as Graphics, Input System and some others - and some of them even accept PRs!)
 
-#### Pain Points with Unity's approach to packages
+#### Pain Points with Unity's approach to package releases
 
 <b>No easy way to compare code between versions.</b> While the [Unity Engine C# Reference Code](https://github.com/Unity-Technologies/UnityCsReference) is fully available on GitHub the same is not true for most packages.
 
@@ -37,7 +39,7 @@ Here are some notable exceptions:
 - [Universal Rendering Pipeline](https://github.com/needle-mirror/com.unity.render-pipelines.universal/blob/master/CHANGELOG.md) ⭐⭐
 - [Cinemachine](https://github.com/needle-mirror/com.unity.cinemachine/blob/master/CHANGELOG.md) ⭐
 
-<i>Note that the first two are public repos - turns out having your Changelog user-facing and accessible with one click improves internal quality a lot! Who'd have thought!</i>
+<i>Note that the first two are public repos — turns out having your Changelog user-facing and accessible with one click improves internal quality a lot! Who'd have thought!</i>
 
 #### Our solution
 
@@ -47,24 +49,27 @@ So, we decided to automate it; and make it available on GitHub for everyone.
 This account contains all available Unity packages, with all their versions.
 This allows for a couple of very nice things:
 
-1. <b>Easily see the order in which packages are published</b>, including branching
-(ever wondered why 3.0.1 and 4.1.2 work while 3.1.4 is broken in your project?)
-[Example]()
+1. ⚖️ <b>Compare package versions</b> right on GitHub, without having to download first and then see whether you actually need the changes.  
+[Example](https://github.com/needle-mirror/com.unity.xr.arfoundation/compare/2019.3/4.0.0-preview.3...2019.2/3.1.3)
 
-1. <b>Browse actual changelogs written by the devs</b> and not what the technical writers create out of it (sometimes it's better, sometimes it's worse, but the dev changelog is definitely more fine-grained and, at least to us, more helpful).
-[Example]()
+1. 🥇 <b>Easily see the order in which packages are published</b>, including branching
+(ever wondered why 3.0.1 and 4.1.2 work while 3.1.4 is broken in your project?)  
+[Example](https://github.com/needle-mirror/com.unity.xr.arfoundation/network)
 
-1. <b>Easy forking for making adjustments.</b> You still can follow updates relatively easy by rebasing to a newer version occasionally.
-[Example]()
+1. 📇 <b>Browse changelogs written by the devs</b>. While the technical writers usually do a great job, the dev changelog is definitely more fine-grained and, at least to us, more helpful.  
+[Example](https://github.com/needle-mirror/com.unity.cinemachine/blob/master/CHANGELOG.md)
 
-1. <b>Release overview</b>. The GitHub releases page makes it easy to skim through a lot of package versions and see what happened when.
-[Example]()
+1. 🗡️ <b>Easy forking.</b> You still can follow updates relatively easy by rebasing to a newer version occasionally.  
+[Try it now for XR Interaction Toolkit]()
+
+1. 📜 <b>Release overview</b>. The GitHub releases page makes it easy to skim through a lot of package versions and see what happened when.  
+[Example](https://github.com/needle-mirror/com.unity.xr.arfoundation/releases)
 
 #### Caveats
 
 Currently, it's not easy to see:  
 - <b>which Unity version is supported by a specific package</b>  
-<i>you can still see it from inside package.json in each version</i>
+<i>you can still see the minimal version from inside package.json, but not maximal version</i>
 
 - <b>which package versions have been unpublished again.</b>  
 <i>we might add a tag for that at a later point</i>
@@ -75,8 +80,17 @@ Currently, it's not easy to see:
 #### Open questions
 
 We haven't fully understood how Unity determines which packages to show in Package Manager. 
-For example, URP 6.x is only visible in Unity 2018, but not in 2017 or 2019. package.json only specifies a min version, not a max version.  
+For example, URP 6.x is only visible in Unity 2019.2, but not in 2019.3 or 2020.1 — package.json only specifies a min version, not a max version.  
+
 If someone knows, please tell us on Twitter!
+
+#### Statistics (not yet)
+
+We'd love to create some but haven't yet.
+
+#### Code (not yet)
+
+We're gonna release the source code of Needle Mirror soon (after some cleanup, removing credentials etc. etc.).
 
 #### Who did this?!
 
