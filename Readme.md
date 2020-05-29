@@ -71,20 +71,20 @@ Here are some notable exceptions:
 
 #### This section is for you, dear Unity QA people
 
-Issues with packages:
+While building this, we stumbled upon a couple of issues with package structure, especially around changelog consistency.  
+To clarify: we're putting this here to hopefully improve quality in the future, not to shame anyone. Maintaining and QA'ing this amount of packages is hard.  
 
-1. Incorrect versioning in Changelog (not adhering to SemVer specs)
-Package Version: `0.7.1-preview`
-Changelog Version: `0.7.1`
-[Example](https://github.com/needle-mirror/com.unity.barracuda/releases/tag/0.7.1-preview)
-
-1. Totally wrong version in Changelog
-`[0.1.2-preview] - 9999-12-31`
+1. <b>Incorrect versioning in Changelog</b>(not adhering to SemVer specs)  
+Package Version: `0.7.1-preview`  
+Changelog Version: `0.7.1`  
+[Example](https://github.com/needle-mirror/com.unity.barracuda/releases/tag/0.7.1-preview)  
+Sometimes (rarely), it's even worse:
+`[0.1.2-preview] - 9999-12-31`  
 [Example](https://github.com/needle-mirror/com.havok.physics/commit/65862f557de2d864877fa482426c4a6fc8577b7e)
 
-1. Internal submodules submitted with package releases
+1. <b>Internal submodules submitted with package releases</b>  
 Some packages contain `.gitmodules` and `.git` files.  
-These show that internal submodules are used, e.g. for Testing:
+These show that internal submodules are used, e.g. for Testing:  
 `com.unity.test-framework.performance` contains a .gitmodule with
 ```
 [submodule "Runtime/Data"]
@@ -93,7 +93,24 @@ These show that internal submodules are used, e.g. for Testing:
 ```
 Of course it's totally ok that there are submodules for heavy test data, but embedding such a package in a project might cause some issues since the (Unity internal) submodule obviously can't be found.
 
-#### Caveats
+1. <b>No/empty changelogs</b>  
+[Example - very helpful changelog](https://github.com/needle-mirror/com.unity.mobile.buildreport/blob/master/CHANGELOG.md)  
+[Example - Changelog TODO](https://github.com/needle-mirror/com.unity.reflect.runtime/blob/master/CHANGELOG.md)  
+[Example - no Changelog](https://github.com/needle-mirror/com.unity.incrementalcompiler)
+
+1. <b>Some teams might need more information about package structure</b>  
+[Example - four releases to get ~Documentation folder right](https://github.com/needle-mirror/com.unity.google.resonance.audio/blob/master/CHANGELOG.md)  
+
+Overall, quality of Changelogs definitely increases over time — seems more and more teams are aware of how important a good changelog is. Thank you!
+
+#### Open questions
+
+We haven't fully understood how Unity determines which packages to show in Package Manager. 
+For example, URP 6.x is only visible in Unity 2019.2, but not in 2019.3 or 2020.1 — package.json only specifies a min version, not a max version.  
+
+If someone knows, please tell us on Twitter!
+
+#### Known Issues
 
 Currently, it's not easy to see:  
 - <b>which Unity version is supported by a specific package</b>  
@@ -104,15 +121,6 @@ Currently, it's not easy to see:
 
 - <b>package keywords</b>  
 <i>we'll have to add them manually as repository topics</i>
-
-#### Open questions
-
-We haven't fully understood how Unity determines which packages to show in Package Manager. 
-For example, URP 6.x is only visible in Unity 2019.2, but not in 2019.3 or 2020.1 — package.json only specifies a min version, not a max version.  
-
-If someone knows, please tell us on Twitter!
-
-#### Known Issues
 
 ##### Packages aliases
 <i>These have been renamed at some point</i>
