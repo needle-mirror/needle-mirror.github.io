@@ -164,7 +164,7 @@ We're gonna release the source code of Needle Mirror soon (after some cleanup, r
 
 <b>[needle — tools for unity](https://needle.tools)</b>
 [@marcel_wiessler](https://twitter.com/marcel_wiessler)
-[@hybridherbst](https://twitter.com/hybdridherbst)
+[@hybridherbst](https://twitter.com/hybridherbst)
 
 #### Addendum
 
