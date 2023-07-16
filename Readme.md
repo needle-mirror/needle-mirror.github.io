@@ -152,14 +152,6 @@ com.unity.facebook-platform (?)
 com.unity.barracuda.burst (merged into Barracuda package)  
 ```
 
-#### Statistics (not yet)
-
-We'd love to create some but haven't yet.
-
-#### Code (not yet)
-
-We're gonna release the source code of Needle Mirror soon (after some cleanup, removing credentials etc. etc.).
-
 #### Who did this?!
 
 <b>[needle — tools for unity](https://needle.tools)</b>
