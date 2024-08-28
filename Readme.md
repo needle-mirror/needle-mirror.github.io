@@ -1,4 +1,4 @@
-## <span class="logo"><a href="https://needle.tools">!=</a></span>unity package mirror
+## Unity Package Mirror
 
 #### [All Unity Packages on GitHub](https://github.com/needle-mirror/)
 
@@ -102,13 +102,6 @@ Of course it's totally ok that there are submodules for heavy test data, but emb
 [Example - four releases to get ~Documentation folder right](https://github.com/needle-mirror/com.unity.google.resonance.audio/blob/master/CHANGELOG.md)  
 
 Overall, quality of Changelogs definitely increases over time — seems more and more teams are aware of how important a good changelog is. Thank you!
-
-#### Open questions
-
-We haven't fully understood how Unity determines which packages to show in Package Manager. 
-For example, URP 6.x is only visible in Unity 2019.2, but not in 2019.3 or 2020.1 — package.json only specifies a min version, not a max version.  
-
-If someone knows, please tell us on Twitter!
 
 #### Known Issues
 

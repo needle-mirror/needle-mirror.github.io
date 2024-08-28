@@ -4,13 +4,12 @@
   <meta charset="utf-8"/>
   <title>needle — unity package mirror</title>
   <link rel="stylesheet" type="text/css" href="css/splendor.css">
-  <link rel="stylesheet" type="text/css" href="https://needle.tools/css/custom.css">
 </head>
 <body>
   <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <!-- <script src="https://unpkg.com/browse/dompurify/dist/purify.min.js"></script> -->
-  <script>
+  <script type="module">
+    import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
     fetch('Readme.md')
         .then(response => response.text())
         .then((data) => {
